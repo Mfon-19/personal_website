@@ -1,36 +1,34 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[var(--background)] text-black relative">
+    <div className="min-h-screen text-black relative">
       {/* Left Navigation */}
-      <nav className="fixed top-0 left-0 z-10 p-8">
-        <ul className="flex flex-col space-y-4">
+      <nav className="fixed top-0 left-0 z-10 p-8 md:p-12">
+        <ul className="flex flex-col space-y-3">
           <li>
             <a
               href="#home"
-              className="text-[26px] font-normal leading-[40px] hover:opacity-70 transition-opacity duration-200">
+              className="text-[21px] font-normal leading-tight hover:opacity-70 transition-opacity duration-200">
               Home
             </a>
           </li>
           <li>
             <a
               href="#projects"
-              className="text-[26px] font-normal leading-[40px] hover:opacity-70 transition-opacity duration-200">
+              className="text-[21px] font-normal leading-tight hover:opacity-70 transition-opacity duration-200">
               Projects
             </a>
           </li>
           <li>
             <a
               href="#experience"
-              className="text-[26px] font-normal leading-[40px] hover:opacity-70 transition-opacity duration-200">
+              className="text-[21px] font-normal leading-tight hover:opacity-70 transition-opacity duration-200">
               Experience
             </a>
           </li>
           <li>
             <a
               href="#blog"
-              className="text-[26px] font-normal leading-[40px] hover:opacity-70 transition-opacity duration-200">
+              className="text-[21px] font-normal leading-tight hover:opacity-70 transition-opacity duration-200">
               Blog
             </a>
           </li>
@@ -38,14 +36,14 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <main className="flex flex-col items-end justify-center min-h-screen px-8 pr-16">
+      <main className="flex flex-col items-end justify-center min-h-screen max-w-7xl ml-auto px-6 sm:px-12 sm:pr-24">
         {/* Name */}
-        <h1 className="text-[115px] font-semibold text-right mb-8 leading-tight">
-          Mfon Udoh
+        <h1 className="text-[110px] font-semibold text-right mb-12 leading-tight">
+          mfon udoh
         </h1>
 
         {/* Subtitle */}
-        <p className="text-[30px] text-right max-w-[40ch] leading-[1.4] mb-12">
+        <p className="text-[25px] text-right max-w-[40ch] leading-[1.4] mb-16">
           Building digital experiences that bridge technology and human
           connection.
         </p>

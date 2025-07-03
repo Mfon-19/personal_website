@@ -12,25 +12,40 @@
   --font-sans: var(--font-inter);
 }
 
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   height: 100%;
-  font-family: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
-}
-
-body {
   background: var(--background);
   background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
   background-size: 16px 16px;
+}
+
+body {
+  margin: 0;
+  padding: 1.5rem;
+  height: 100%;
+  font-family: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
+  background: transparent;
   color: var(--foreground);
-  font-size: 16px;
+  font-size: 11px;
   line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+  body {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding: 3rem;
+  }
 }
 
 a {
