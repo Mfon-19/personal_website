@@ -52,7 +52,7 @@ export default function Home() {
         <div className="flex items-center gap-[60px]">
           {/* GitHub */}
           <a
-            href="https://github.com"
+            href="https://github.com/Mfon-19"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-70 transition-opacity duration-200"
@@ -72,7 +72,7 @@ export default function Home() {
 
           {/* LinkedIn */}
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/mfonudoh18"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-70 transition-opacity duration-200"
