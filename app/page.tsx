@@ -44,8 +44,8 @@ export default function Home() {
 
         {/* Subtitle */}
         <p className="text-[25px] text-right max-w-[40ch] leading-[1.4] mb-16">
-          Building digital experiences that bridge technology and human
-          connection.
+          hi, i’m a computer science student that loves to make stuff I find
+          interesting. hope you like what i make :)
         </p>
 
         {/* Social Row */}
