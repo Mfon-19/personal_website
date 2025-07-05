@@ -13,14 +13,14 @@ export default function Home() {
           </li>
           <li>
             <a
-              href="#projects"
+              href="/projects"
               className="text-[21px] font-normal leading-tight hover:opacity-70 transition-opacity duration-200">
               Projects
             </a>
           </li>
           <li>
             <a
-              href="#experience"
+              href="/experience"
               className="text-[21px] font-normal leading-tight hover:opacity-70 transition-opacity duration-200">
               Experience
             </a>
@@ -44,7 +44,7 @@ export default function Home() {
 
         {/* Subtitle */}
         <p className="text-[25px] text-right max-w-[40ch] leading-[1.4] mb-16">
-          hi, i’m a computer science student that loves to make stuff I find
+          hi, i’m a computer science student that loves to build stuff I find
           interesting. hope you like what i make :)
         </p>
 
@@ -92,7 +92,7 @@ export default function Home() {
 
           {/* Resume/Document */}
           <a
-            href="/resume.pdf"
+            href="/resume/Mfon Resume copy.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-70 transition-opacity duration-200"

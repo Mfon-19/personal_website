@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Eureka",
+    "description": "Eureka is the place where developers come to get inspiration to build. It is a collection of 100,000+ ideas from developers of all backgrounds.",
+    "github_link": "https://github.com/Mfon-19/rmhi",
+    "technologies": [
+      "Next.js",
+      "Spring Boot",
+      "PostgreSQL",
+      "Puppeteer",
+      "Vercel"
+    ],
+    "image": "public/images/eureka_logo.png"
+  },
+  {
+    "name": "Network Intrusion Detection System (NIDS)",
+    "description": "A machine learning based NIDS for detecting abmornal network traffic. It beats traditional approaches like Snort by 6%.",
+    "github_link": "https://github.com/Mfon-19/nids",
+    "technologies": ["Python", "FastAPI", "Docker"],
+    "image": "public/images/nids_image.png"
+  },
+  {
+    "name": "FilmFindr",
+    "description": "A platform where users come to find the next movie or show to watch.",
+    "github_link": "https://github.com/Mfon-19/film_findr",
+    "technologies": ["Next.js", "Spring Boot", "PostgreSQL", "Docker"],
+    "image": "public/images/film-findr_image.png"
+  }
+]
