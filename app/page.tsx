@@ -1,28 +1,30 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="min-h-screen text-black relative">
       <nav className="mobile-nav md:fixed md:top-0 md:left-0 md:z-10 md:p-8 lg:p-12">
         <ul className="flex flex-row justify-center space-x-6 md:flex-col md:space-x-0 md:space-y-3">
           <li>
-            <a
+            <Link
               href="/"
               className="text-[16px] md:text-[21px] font-normal leading-tight hover:opacity-70 transition-opacity duration-200">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/projects"
               className="text-[16px] md:text-[21px] font-normal leading-tight hover:opacity-70 transition-opacity duration-200">
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/experience"
               className="text-[16px] md:text-[21px] font-normal leading-tight hover:opacity-70 transition-opacity duration-200">
               Experience
-            </a>
+            </Link>
           </li>
           <li>
             <a
@@ -40,8 +42,8 @@ export default function Home() {
         </h1>
 
         <p className="text-[18px] sm:text-[20px] md:text-[25px] text-center md:text-right max-w-[40ch] leading-[1.4] mb-12 md:mb-16 px-4 md:px-0">
-          hi, i'm a computer science student that loves to build stuff I find
-          interesting. hope you like what i make :)
+          hi, i&apos;m a computer science student that loves to build stuff I
+          find interesting. hope you like what i make :)
         </p>
 
         <div className="flex items-center gap-8 md:gap-[60px]">
