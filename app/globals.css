@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f9fafb;
+  --background: #f7f7ee;
   --foreground: #000000;
   --font-inter: var(--font-inter);
 }
@@ -27,15 +27,15 @@ html {
 
 body {
   margin: 0;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 0;
   padding-bottom: 0;
   height: 100%;
   font-family: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
   background: transparent;
   color: var(--foreground);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -43,6 +43,7 @@ body {
   body {
     padding-left: 2rem;
     padding-right: 2rem;
+    font-size: 16px;
   }
 }
 
@@ -61,4 +62,37 @@ a {
 a:hover {
   opacity: 0.7;
   transition: opacity 0.2s ease;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--background);
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: auto;
+    background: transparent;
+    border-bottom: none;
+    padding: 2rem 3rem;
+  }
+}
+
+.main-content {
+  padding-top: 80px;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    padding-top: 0;
+  }
 }
