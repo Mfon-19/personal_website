@@ -39,11 +39,11 @@ export default function Projects() {
             </Link>
           </li>
           <li>
-            <a
-              href="#blog"
+            <Link
+              href="/blog"
               className="text-[16px] md:text-[21px] font-normal leading-tight hover:opacity-70 transition-opacity duration-200">
               Blog
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
