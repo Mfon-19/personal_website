@@ -1,0 +1,72 @@
+---
+title: "Dynamic Memory Allocation"
+date: "2026-01-12"
+excerpt: "A deep dive into how dynamic memory allocation works in C, covering the stack, heap, and allocator implementation details."
+tags: ["Systems", "C", "Memory Management"]
+---
+
+Let's talk about dynamic memory allocation.
+
+When a user runs a C program (executable object file), the loader sets up the call stack and performs some other functions. The call stack looks like this:
+
+<Image
+  src="/images/call-stack.png"
+  alt="Call Stack Diagram"
+  width={400}
+  height={600}
+  className="mx-auto my-8"
+/>
+
+In the image above with the stack represented vertically, we can see that the user space is at the top of the stack and grows downward by decrementing `%rsp`. After that, there lies shared object files, and then the heap which grows upwards by incrementing `brk`. This heap, also known as the free store, is where our C program gets memory to store objects like arrays, class objects, etc.
+
+## But why do we need the heap at all?
+
+When the C program is running, the CPU executes instructions in sequential order. It stores variables in registers (there are 16 of them on x86_64 architectures) and may save the values in these registers by pushing onto the stack. With hardcoded array allocations like `int arr[5]`, all the elements in the array will be stored on the stack.
+
+Say you wanted to read some numbers in a file into an array, and the file layout is like so:
+
+```txt
+3 /* how many numbers to read */
+/* the numbers to be read */
+3
+6
+7
+```
+
+One thing you could do is define some arbitrarily large array size that would work in many cases, but will either waste too much space as it could be underutilized, or not have enough space to store all the values you read. Besides these issues, it is also not the best coding practice to hardcode values like this.
+
+Another option you have is to read the first line in the file, which will tell you exactly how much space needs to be allocated, and then calling `malloc()` to allocate **exactly** that much space. This guarantees maximum memory utilization (not quite because of alignment—more in the next section!) and ensures you follow best coding practices.
+
+## The Heap
+
+The heap is a memory space divided into blocks. We can ask for some of these blocks by calling `malloc()` or `calloc()`. Both `malloc` and `calloc` will return a pointer to the start of the allocated block, and `-1` if there was some error.
+
+The heap could be either **single word aligned** or **double word aligned**:
+- **Single word aligned** means that each allocation will be a multiple of 4. For example, if the user requests 6 bytes, `malloc` will return a pointer to a block of size 8, padding 2 bytes to align the block.
+- **Double word aligned** means each allocation will be a multiple of 8.
+
+### How does malloc choose a block to return?
+
+There are three placement policies that the dynamic allocator can use to determine which block to allocate:
+
+1. **First fit** - scan the heap from the beginning, and allocate the very first block that can fit the user’s size request. This is simple, but could result in heavy internal fragmentation.
+2. **Next fit** - scan the heap starting right after the most recently allocated block, and allocate the first block we see that fits the user’s request.
+3. **Best fit** - scan the entire heap, and allocate the block that fits the user’s size request the best. This reduces internal fragmentation, but is slower than the previous two.
+
+### How do we know which block is free, and which is allocated?
+
+For the dynamic allocator to do its job properly, it should know which blocks are allocated, and which aren’t. It is easy to encode this information directly in the blocks. We use a 1 byte header that encodes the block size, and whether or not the block is allocated. This is called an **implicit free list**.
+
+<Image
+  src="/images/implicit-free-block.png"
+  alt="Implicit Free List Diagram"
+  width={400}
+  height={600}
+  className="mx-auto my-8"
+/>
+
+Using this information, it is easy to traverse the blocks. If we are at block `p`, then the next block is just `*p + block_size`. This also makes coalescing contiguous free blocks easy. We also have a 1 byte footer that contains the exact same information as the header, which makes it easy to coalesce the previous free block.
+
+The user frees the block by calling `free()`, which sets the `alloc` bit to 1, and optionally coalesces the block with free blocks right after it and right behind it.
+
+That's basically it! Of course there are more advanced ways to represent the block. With **explicit free lists**, since the payload section of the free blocks aren’t used, they embed pointers to the next free block and the previous free block. This way, the allocator can traverse the blocks like a doubly linked list.

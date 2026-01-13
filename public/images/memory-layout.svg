@@ -1,0 +1,38 @@
+<svg width="400" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="400" height="600" fill="#f8f9fa"/>
+  
+  <!-- Stack - Grows Down -->
+  <rect x="50" y="50" width="300" height="100" fill="#e9ecef" stroke="#343a40" stroke-width="2"/>
+  <text x="200" y="105" font-family="Arial" font-size="20" text-anchor="middle" fill="#343a40">Stack</text>
+  <text x="360" y="105" font-family="Arial" font-size="12" text-anchor="middle" fill="#495057">High Addr</text>
+
+  <!-- Arrow Down -->
+  <line x1="200" y1="150" x2="200" y2="190" stroke="#343a40" stroke-width="2" marker-end="url(#arrowdown)"/>
+  
+  <!-- Shared Libraries -->
+  <rect x="50" y="250" width="300" height="60" fill="#dee2e6" stroke="#343a40" stroke-width="2"/>
+  <text x="200" y="287" font-family="Arial" font-size="18" text-anchor="middle" fill="#343a40">Shared Libraries</text>
+
+  <!-- Arrow Up -->
+  <line x1="200" y1="390" x2="200" y2="350" stroke="#343a40" stroke-width="2" marker-end="url(#arrowup)"/>
+
+  <!-- Heap - Grows Up -->
+  <rect x="50" y="400" width="300" height="100" fill="#e9ecef" stroke="#343a40" stroke-width="2"/>
+  <text x="200" y="455" font-family="Arial" font-size="20" text-anchor="middle" fill="#343a40">Heap</text>
+
+  <!-- Data / Text -->
+  <rect x="50" y="520" width="300" height="60" fill="#ced4da" stroke="#343a40" stroke-width="2"/>
+  <text x="200" y="557" font-family="Arial" font-size="18" text-anchor="middle" fill="#343a40">Data / Text</text>
+  <text x="360" y="557" font-family="Arial" font-size="12" text-anchor="middle" fill="#495057">Low Addr</text>
+
+  <!-- Definitions -->
+  <defs>
+    <marker id="arrowdown" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#343a40" />
+    </marker>
+    <marker id="arrowup" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#343a40" />
+    </marker>
+  </defs>
+</svg>

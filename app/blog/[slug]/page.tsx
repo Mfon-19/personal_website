@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Image from "next/image";
 import { getAllPostSlugs, getPostBySlug } from "../../utils/blog";
 
 interface Props {
@@ -120,7 +121,7 @@ export default async function BlogPost({ params }: Props) {
           </header>
 
           <div className="prose prose-lg max-w-none prose-headings:font-semibold prose-headings:text-black prose-p:text-black prose-p:opacity-90 prose-p:leading-[1.8] prose-a:text-black prose-a:underline prose-strong:text-black prose-code:text-black prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-ul:text-black prose-ol:text-black prose-li:text-black prose-li:opacity-90">
-            <MDXRemote source={post.content} />
+            <MDXRemote source={post.content} components={{ Image }} />
           </div>
         </article>
       </main>
