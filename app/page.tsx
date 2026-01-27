@@ -47,7 +47,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-2">
             <span className="tag">Systems engineering</span>
             <span className="tag">Distributed systems</span>
-            <span className="tag">Parallel programming</span>
+            <span className="tag">Parallel computing</span>
           </div>
         </div>
 
