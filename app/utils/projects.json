@@ -1,29 +1,30 @@
 [
   {
+    "name": "Key-Value Database with Raft Consensus",
+    "description": "A distributed key-value database that maintains consistency across multiple nodes using the Raft consensus algorithm. The system handles leader election, log replication, and fault tolerance automatically, ensuring your data stays consistent even when servers fail. Features an append-only log structure with smart compaction strategies that dramatically reduce storage overhead and restart times for large datasets.",
+    "github_link": "https://github.com/Mfon-19/kvraft",
+    "technologies": ["Go", "gRPC", "Raft"],
+    "image": "/images/raft.png"
+  },
+  {
+    "name": "Mentra",
+    "description": "An AI-powered learning companion that overlays interactive tutorials directly on your screen, eliminating the need to switch between your work and tutorial videos. Simply describe what you want to learn in natural language, and Mentra generates step-by-step lessons that guide you through the process in real-time. Built during CalHacks 12.0 to make learning new skills seamless and context-aware.",
+    "github_link": "https://github.com/Mfon-19/mentra-calhacks2025",
+    "technologies": ["Electron.js", "Flask", "Python", "PostgreSQL", "Groq"],
+    "image": "/images/mentra.png"
+  },
+  {
+    "name": "MapReduce",
+    "description": "A distributed computing framework inspired by Google's MapReduce that processes large datasets by splitting work across multiple machines. The system automatically handles task distribution, monitors worker health, and recovers from failures by reassigning work to healthy nodes. Perfect for learning how distributed systems scale computation and handle the challenges of coordinating work across unreliable networks.",
+    "github_link": "https://github.com/Mfon-19/mapreduce",
+    "technologies": ["Go", "gRPC"],
+    "image": "/images/mapreduce.png"
+  },
+  {
     "name": "Eureka",
-    "description": "Eureka is the place where developers come to get inspiration to build. It is a collection of 100,000+ ideas from developers of all backgrounds.",
+    "description": "A discovery platform that aggregates thousands of hackathon projects from Devpost to help developers find inspiration for their next build. Browse through innovative ideas, filter by technology or category, and discover what others have created. The platform uses AI to automatically categorize and enrich project data, making it easy to find exactly the kind of inspiration you're looking for.",
     "github_link": "https://github.com/Mfon-19/rmhi",
-    "technologies": [
-      "Next.js",
-      "Spring Boot",
-      "PostgreSQL",
-      "Puppeteer",
-      "Vercel"
-    ],
-    "image": "public/images/eureka_logo.png"
-  },
-  {
-    "name": "Network Intrusion Detection System (NIDS)",
-    "description": "A machine learning based NIDS for detecting abmornal network traffic. It beats traditional approaches like Snort by 6%.",
-    "github_link": "https://github.com/Mfon-19/nids",
-    "technologies": ["Python", "FastAPI", "Docker"],
-    "image": "public/images/nids_image.png"
-  },
-  {
-    "name": "FilmFindr",
-    "description": "A platform where users come to find the next movie or show to watch.",
-    "github_link": "https://github.com/Mfon-19/film_findr",
-    "technologies": ["Next.js", "Spring Boot", "PostgreSQL", "Docker"],
-    "image": "public/images/film-findr_image.png"
+    "technologies": ["Java", "Spring Boot", "Next.js", "Python", "Docker", "AWS"],
+    "image": "/images/eureka.png"
   }
 ]

@@ -1,10 +1,10 @@
 [
   {
     "company": "Environment and Climate Change Canada",
-    "position": "Application Developer Co-op",
-    "description": "My team and I developed and recently launched an enterprise-grade ServiceNow ITSM platform for Environment and Climate Change Canada, now serving 500+ employees with the aim to centralize incident tracking, service requests, and to automate workflows. The project has now moved into the maintenance and continuous-improvement phase.",
+    "position": "Software Developer Co-op",
+    "description": "My team and I developed and launched an ITSM platform for Environment and Climate Change Canada, now serving 10,000+ employees with the aim to centralize incident tracking, service requests, and to automate workflows. I also worked on a virtual agent that uses NLP to handle user requests, the first of its kind in the department.",
     "begin": "May 2025",
-    "end": "present",
+    "end": "December 2025",
     "image": "/images/eccc-logo.png"
   }
 ]
