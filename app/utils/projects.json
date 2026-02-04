@@ -24,7 +24,31 @@
     "name": "Eureka",
     "description": "A discovery platform that aggregates thousands of hackathon projects from Devpost to help developers find inspiration for their next build. Browse through innovative ideas, filter by technology or category, and discover what others have created. The platform uses AI to automatically categorize and enrich project data, making it easy to find exactly the kind of inspiration you're looking for.",
     "github_link": "https://github.com/Mfon-19/rmhi",
-    "technologies": ["Java", "Spring Boot", "Next.js", "Python", "Docker", "AWS"],
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "Next.js",
+      "Python",
+      "Docker",
+      "AWS"
+    ],
     "image": "/images/eureka.png"
+  },
+  {
+    "name": "ScribeLoop",
+    "description": "A real-time collaborative study notes platform where students organize content by course and week, create shared documents, and edit together with live updates and cursor presence. It combines a Spring Boot REST API for durable course/document management with a low-latency WebSocket collab server, supports role-based sharing (owner/editor/viewer), and stores notes as structured blocks for reliable syncing, search, and exports.",
+    "github_link": "https://github.com/Mfon-19/ScribeLoop",
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "Next.js",
+      "PostgreSQL",
+      "WebSockets",
+      "Tiptap",
+      "Hocuspocus",
+      "Yjs",
+      "Render"
+    ],
+    "image": "/images/scribeloop.png"
   }
 ]
