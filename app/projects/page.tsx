@@ -6,6 +6,7 @@ interface Project {
   name: string;
   description: string;
   github_link: string;
+  deployment_url?: string;
   technologies: string[];
   image: string;
 }
@@ -50,14 +51,26 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-              <a
-                href={project.github_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.2em]">
-                View repo
-                <span aria-hidden="true">-&gt;</span>
-              </a>
+              <div className="mt-5 flex flex-wrap items-center gap-4 text-[12px] font-semibold uppercase tracking-[0.2em]">
+                <a
+                  href={project.github_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2">
+                  View repo
+                  <span aria-hidden="true">-&gt;</span>
+                </a>
+                {project.deployment_url ? (
+                  <a
+                    href={project.deployment_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2">
+                    Live site
+                    <span aria-hidden="true">-&gt;</span>
+                  </a>
+                ) : null}
+              </div>
             </div>
           </article>
         ))}

@@ -49,6 +49,7 @@
       "Yjs",
       "Render"
     ],
-    "image": "/images/scribeloop.png"
+    "image": "/images/scribeloop.png",
+    "deployment_url": "https://scribe-loop.vercel.app/"
   }
 ]
