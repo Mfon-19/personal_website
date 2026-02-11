@@ -51,5 +51,20 @@
     ],
     "image": "/images/scribeloop.png",
     "deployment_url": "https://scribe-loop.vercel.app/"
+  },
+  {
+    "name": "Repro",
+    "description": "A platform for implementing research papers LeetCode style. Upload a paper, get back a code scaffold plus tests, implement it in a browser IDE, and submit",
+    "github_link": "https://github.com/Mfon-19/repro",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Neon Postgres",
+      "Gemini",
+      "Upstash QStash",
+      "Vercel Sandbox"
+    ],
+    "image": "/images/repro.png",
+    "deployment_url": "https://repro-blond.vercel.app/"
   }
 ]
