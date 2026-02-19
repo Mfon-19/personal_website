@@ -66,5 +66,22 @@
     ],
     "image": "/images/repro.png",
     "deployment_url": "https://repro-blond.vercel.app/"
+  },
+  {
+    "name": "Market Service",
+    "description": "A real-time market data microservice. It ingests prices from external providers, stores raw/processed data in Postgres, publishes events to Kafka, computes O(1) rolling MA5 in a consumer, serves low-latency latest-price reads with Redis cache, and includes Prometheus/Grafana benchmarking observability.",
+    "github_link": "https://github.com/Mfon-19/market-service",
+    "technologies": [
+      "FastAPI",
+      "Python",
+      "PostgreSQL",
+      "Kafka",
+      "Redis",
+      "SQLAlchemy",
+      "Prometheus",
+      "Grafana",
+      "Docker Compose"
+    ],
+    "image": "/images/market-service.png"
   }
 ]
