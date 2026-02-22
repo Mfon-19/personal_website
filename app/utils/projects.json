@@ -7,11 +7,61 @@
     "image": "/images/raft.png"
   },
   {
+    "name": "Market Service",
+    "description": "A real-time market data microservice. It ingests prices from external providers, stores raw/processed data in Postgres, publishes events to Kafka, computes O(1) rolling MA5 in a consumer, serves low-latency latest-price reads with Redis cache, and includes Prometheus/Grafana benchmarking observability.",
+    "github_link": "https://github.com/Mfon-19/market-service",
+    "technologies": [
+      "FastAPI",
+      "Python",
+      "PostgreSQL",
+      "Kafka",
+      "Redis",
+      "SQLAlchemy",
+      "Prometheus",
+      "Grafana",
+      "Docker Compose"
+    ],
+    "image": "/images/market-service.png"
+  },
+  {
+    "name": "Repro",
+    "description": "A platform for implementing research papers LeetCode style. Upload a paper, get back a code scaffold plus tests, implement it in a browser IDE, and submit",
+    "github_link": "https://github.com/Mfon-19/repro",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Neon Postgres",
+      "Gemini",
+      "Upstash QStash",
+      "Vercel Sandbox"
+    ],
+    "image": "/images/repro.png",
+    "deployment_url": "https://repro-blond.vercel.app/"
+  },
+  {
     "name": "Mentra",
     "description": "An AI-powered learning companion that overlays interactive tutorials directly on your screen, eliminating the need to switch between your work and tutorial videos. Simply describe what you want to learn in natural language, and Mentra generates step-by-step lessons that guide you through the process in real-time. Built during CalHacks 12.0 to make learning new skills seamless and context-aware.",
     "github_link": "https://github.com/Mfon-19/mentra-calhacks2025",
     "technologies": ["Electron.js", "Flask", "Python", "PostgreSQL", "Groq"],
     "image": "/images/mentra.png"
+  },
+  {
+    "name": "ScribeLoop",
+    "description": "A real-time collaborative study notes platform where students organize content by course and week, create shared documents, and edit together with live updates and cursor presence. It combines a Spring Boot REST API for durable course/document management with a low-latency WebSocket collab server, supports role-based sharing (owner/editor/viewer), and stores notes as structured blocks for reliable syncing, search, and exports.",
+    "github_link": "https://github.com/Mfon-19/ScribeLoop",
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "Next.js",
+      "PostgreSQL",
+      "WebSockets",
+      "Tiptap",
+      "Hocuspocus",
+      "Yjs",
+      "Render"
+    ],
+    "image": "/images/scribeloop.png",
+    "deployment_url": "https://scribe-loop.vercel.app/"
   },
   {
     "name": "MapReduce",
@@ -33,55 +83,5 @@
       "AWS"
     ],
     "image": "/images/eureka.png"
-  },
-  {
-    "name": "ScribeLoop",
-    "description": "A real-time collaborative study notes platform where students organize content by course and week, create shared documents, and edit together with live updates and cursor presence. It combines a Spring Boot REST API for durable course/document management with a low-latency WebSocket collab server, supports role-based sharing (owner/editor/viewer), and stores notes as structured blocks for reliable syncing, search, and exports.",
-    "github_link": "https://github.com/Mfon-19/ScribeLoop",
-    "technologies": [
-      "Java",
-      "Spring Boot",
-      "Next.js",
-      "PostgreSQL",
-      "WebSockets",
-      "Tiptap",
-      "Hocuspocus",
-      "Yjs",
-      "Render"
-    ],
-    "image": "/images/scribeloop.png",
-    "deployment_url": "https://scribe-loop.vercel.app/"
-  },
-  {
-    "name": "Repro",
-    "description": "A platform for implementing research papers LeetCode style. Upload a paper, get back a code scaffold plus tests, implement it in a browser IDE, and submit",
-    "github_link": "https://github.com/Mfon-19/repro",
-    "technologies": [
-      "Next.js",
-      "TypeScript",
-      "Neon Postgres",
-      "Gemini",
-      "Upstash QStash",
-      "Vercel Sandbox"
-    ],
-    "image": "/images/repro.png",
-    "deployment_url": "https://repro-blond.vercel.app/"
-  },
-  {
-    "name": "Market Service",
-    "description": "A real-time market data microservice. It ingests prices from external providers, stores raw/processed data in Postgres, publishes events to Kafka, computes O(1) rolling MA5 in a consumer, serves low-latency latest-price reads with Redis cache, and includes Prometheus/Grafana benchmarking observability.",
-    "github_link": "https://github.com/Mfon-19/market-service",
-    "technologies": [
-      "FastAPI",
-      "Python",
-      "PostgreSQL",
-      "Kafka",
-      "Redis",
-      "SQLAlchemy",
-      "Prometheus",
-      "Grafana",
-      "Docker Compose"
-    ],
-    "image": "/images/market-service.png"
   }
 ]
