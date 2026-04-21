@@ -8,16 +8,12 @@ interface PageShellProps {
 
 export default function PageShell({
   children,
-  contentClassName = "",
+  contentClassName = "page",
 }: PageShellProps) {
-  const contentClasses = ["page-content", contentClassName]
-    .filter(Boolean)
-    .join(" ");
-
   return (
     <div className="page-shell">
       <SiteNav />
-      <main className={contentClasses}>{children}</main>
+      <main className={contentClassName}>{children}</main>
     </div>
   );
 }

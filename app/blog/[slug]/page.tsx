@@ -37,39 +37,26 @@ export default async function BlogPost({ params }: Props) {
   }
 
   return (
-    <PageShell contentClassName="page-content--narrow">
-      <article className="panel p-6 md:p-10 reveal">
-        <Link href="/blog" className="btn btn-secondary w-fit">
-          <span aria-hidden="true">&lt;-</span>
-          Back to blog
+    <PageShell contentClassName="page page--narrow">
+      <article className="story-shell">
+        <Link href="/blog" className="story-back">
+          ← Back to blog
         </Link>
 
-        <header className="mt-6 space-y-4">
-          <h1 className="text-3xl md:text-4xl font-semibold uppercase">
-            {post.title}
-          </h1>
+        <h1 className="story-title">{post.title}</h1>
 
-          <div className="flex flex-wrap items-center gap-3">
-            <time className="kicker">
-              {new Date(post.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </time>
-            {post.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
-                  <span key={tag} className="tag">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
-          </div>
-        </header>
+        <div className="story-meta">
+          <span>
+            {new Date(post.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </span>
+          {post.tags.length > 0 ? <span>{post.tags.join(" · ")}</span> : null}
+        </div>
 
-        <div className="prose prose-lg mt-8 max-w-none">
+        <div className="story-prose prose prose-lg max-w-none">
           <MDXRemote source={post.content} components={{ Image }} />
         </div>
       </article>

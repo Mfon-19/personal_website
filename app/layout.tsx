@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Archivo_Black, Space_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const display = Archivo_Black({
+const sans = Inter({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-display",
+  weight: ["300", "400", "500"],
+  variable: "--font-sans",
 });
 
-const body = Space_Mono({
+const mono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-body",
+  weight: ["400", "500"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
   title: "Mfon Udoh",
-  description: "Personal portfolio of Mfon Udoh",
+  description: "Personal website of Mfon Udoh",
   icons: {
     icon: [
       {
@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${display.variable} ${body.variable} antialiased`}>
+      <body className={`${sans.variable} ${mono.variable} antialiased`}>
         {children}
       </body>
     </html>

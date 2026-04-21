@@ -7,6 +7,13 @@
     "image": "/images/raft.png"
   },
   {
+    "name": "Clavis",
+    "description": "A Raft-backed distributed lock service built around globally monotonic fencing tokens. Each successful lock acquisition mints a cluster-wide token that downstream systems can compare to reject stale writes after pauses, partitions, or failovers. The service exposes a gRPC API, persists deterministic state in BoltDB, and includes Porcupine and Jepsen testing for lock and token invariants under faults.",
+    "github_link": "https://github.com/Mfon-19/clavis",
+    "technologies": ["Go", "Raft", "BoltDB", "gRPC", "Jepsen"],
+    "image": "/images/raft.png"
+  },
+  {
     "name": "Stippling Engine",
     "description": "A high-performance image-to-stippling renderer built around a shared C++ optimization engine. The project replaces an earlier TypeScript prototype and delivers 22-64x higher optimization throughput in benchmarked runs. It exposes the core engine to the browser through WebAssembly and a plain C ABI, runs heavy optimization work off the main thread with Web Workers, and reuses the same core across the web app, native CLI, and test harness.",
     "github_link": "https://github.com/Mfon-19/ga_stippling",
